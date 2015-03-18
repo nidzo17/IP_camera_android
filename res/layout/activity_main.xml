@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+      <ImageButton
+          android:id="@+id/buttonfull"
+          style="?android:attr/buttonStyleSmall"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_alignTop="@+id/buttonup"
+          android:background="@drawable/full"
+          android:onClick="full"
+           />
+
+      <ImageButton
+          android:id="@+id/buttondet"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_alignTop="@+id/buttonup"
+          android:background="@drawable/btdet"
+          android:onClick="Detection" />
+
+      <ImageButton
+          android:id="@+id/buttonright"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/buttonfull"
+          android:layout_toRightOf="@+id/buttonup"
+          android:background="@drawable/btright"
+          android:onClick="move_right" />
+
+      <ImageButton
+          android:id="@+id/buttonup"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_above="@+id/buttonleft"
+          android:layout_centerHorizontal="true"
+          android:background="@drawable/btup"
+          android:onClick="move_up" />
+
+      <ImageButton
+          android:id="@+id/buttonleft"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_above="@+id/buttondown"
+          android:layout_toLeftOf="@+id/buttondown"
+          android:background="@drawable/btleft"
+          android:onClick="move_left" />
+
+      <ImageButton
+          android:id="@+id/buttondown"
+          style="?android:attr/buttonStyleSmall"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignLeft="@+id/buttonup"
+          android:layout_alignParentBottom="true"
+          android:layout_marginBottom="128dp"
+          android:background="@drawable/btdown"
+          android:onClick="move_down" />
+
+      <TextView
+          android:id="@+id/textv"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentBottom="true"
+          android:layout_alignParentLeft="true"
+          android:layout_alignParentRight="true"
+          android:layout_marginBottom="14dp"
+          android:textColor="@android:color/holo_blue_light"
+          android:textColorHint="@android:color/holo_blue_light"
+          android:textSize="18dp"
+          android:visibility="visible" />
+      
+      <VideoView
+        android:id="@+id/video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" />
+
+</RelativeLayout>
